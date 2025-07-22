@@ -2,7 +2,7 @@ describe('Test QA-Jubelio', () => {
   it('Membuka Link Test Jubelio dan Login', () => {
     cy.visit('https://v2.jubelio.com/auth/login');
     cy.get('input[type="email"]').type('meiratesting@gmail.com');
-    cy.get('input[type="password"]').type('#sayaMeira13');
+    cy.get('input[type="password"]').type('');
     cy.contains('Login').click();
     cy.url().should('include', 'dashboard');
   });
